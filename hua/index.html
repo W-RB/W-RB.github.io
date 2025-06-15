@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="夏佑 | XiaU">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://oi.xiau.ren/hua/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="一、C++语法练习（8题）  P1001 A+B Problem（入门） —— OI 开始的地方。  P5710 数的性质（入门） —— 简单的模拟题，考察基础判断逻辑。  P5711 闰年判断（入门） —— 典型的数学计算题，适合熟悉条件判断语句。  P5725 数字直角三角形（入门） —— 需要循环嵌套的模拟题，考验基本逻辑实现能力。  P5726 打分（普及-） —">
+<meta property="og:type" content="article">
+<meta property="og:title" content="夏花盛开，佑浅浅而归">
+<meta property="og:url" content="http://oi.xiau.ren/hua/index.html">
+<meta property="og:site_name" content="夏花盛开，佑浅浅而归">
+<meta property="og:description" content="一、C++语法练习（8题）  P1001 A+B Problem（入门） —— OI 开始的地方。  P5710 数的性质（入门） —— 简单的模拟题，考察基础判断逻辑。  P5711 闰年判断（入门） —— 典型的数学计算题，适合熟悉条件判断语句。  P5725 数字直角三角形（入门） —— 需要循环嵌套的模拟题，考验基本逻辑实现能力。  P5726 打分（普及-） —">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-02-05T10:04:27.929Z">
+<meta property="article:modified_time" content="2025-02-05T11:21:59.222Z">
+<meta property="article:author" content="夏佑">
+<meta name="twitter:card" content="summary">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+        XiaU&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+    <!--- Font Part-->
+    
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600&display=swap" rel="stylesheet">
+    
+    
+    
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600&display=swap" rel="stylesheet">
+    
+    
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600&display=swap" rel="stylesheet">
+    
+
+    <!--- Inject Part-->
+    
+        
+            
+    
+            
+    
+            
+                
+                    <link rel="stylesheet" href="/static/font.css">
+                
+    
+    <script id="hexo-configurations">
+    let Global = window.Global || {};
+    Global.hexo_config = {"hostname":"oi.xiau.ren","root":"/","language":"zh-CN","path":"search.xml"};
+    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":false},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":false,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":6,"number":true,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":true,"family":"Noto Serif SC","url":"https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600&display=swap"},"english":{"enable":true,"family":"Noto Serif SC","url":"https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600&display=swap"}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Flowers Blooming in Summer, I'm Missing You.","subtitle":{"text":["夏花盛开，佑浅浅而归。","夏の花が咲いていて寂しい気持ちになる。","Les fleurs fleurissent en été, Tu me manques."],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":50,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":true,"family":"Noto Serif SC","url":"https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600&display=swap"},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.4.4","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"About":{"path":"/about","icon":"fa-regular fa-user"},"Links":{"path":"/links","icon":"fa-regular fa-link"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    Global.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    Global.data_config = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="夏花盛开，佑浅浅而归" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="swup-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+            <a class="logo-title" href="http://oi.xiau.ren/">
+                
+                XiaU&#39;s Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        首页
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/archives"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-archive"></i>
+                                        
+                                        归档
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/tags"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-tags"></i>
+                                        
+                                        标签
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/about"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-user"></i>
+                                        
+                                        关于
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/links"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-link"></i>
+                                        
+                                        链接
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer w-full absolute top-0 left-0 bg-background-color">
+        <ul class="drawer-navbar-list flex flex-col justify-start items-center">
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                首页
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/archives"  >
+                             
+                                
+                                    <i class="fa-regular fa-archive"></i>
+                                
+                                归档
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/tags"  >
+                             
+                                
+                                    <i class="fa-regular fa-tags"></i>
+                                
+                                标签
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/about"  >
+                             
+                                
+                                    <i class="fa-regular fa-user"></i>
+                                
+                                关于
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/links"  >
+                             
+                                
+                                    <i class="fa-regular fa-link"></i>
+                                
+                                链接
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            
+                <h1 class="article-title-regular"></h1>
+            
+            </div>
+            
+                    
+        
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="https://s2.loli.net/2023/09/15/mLYDw6nxO9RaEke.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">夏佑 | XiaU</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2025-02-05 18:04:27</span>
+        <span class="mobile">2025-02-05 18:04:27</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-02-05 19:21:59</span>
+            <span class="mobile">2025-02-05 19:21:59</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.5k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>8 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body">
+            <h3 id="一c语法练习8题">一、C++语法练习（8题）</h3>
+<ol type="1">
+<li><strong>P1001 A+B Problem（入门）</strong> —— OI 开始的地方。<br />
+</li>
+<li><strong>P5710 数的性质（入门）</strong> ——
+简单的模拟题，考察基础判断逻辑。<br />
+</li>
+<li><strong>P5711 闰年判断（入门）</strong> ——
+典型的数学计算题，适合熟悉条件判断语句。<br />
+</li>
+<li><strong>P5725 数字直角三角形（入门）</strong> ——
+需要循环嵌套的模拟题，考验基本逻辑实现能力。<br />
+</li>
+<li><strong>P5726 打分（普及-）</strong> ——
+处理浮点数计算，需注意精度问题。<br />
+</li>
+<li><strong>B4039 回文拼接（普及-）</strong> ——
+基础字符串操作，适合作为字符串入门题。<br />
+</li>
+<li><strong>P1598 垂直柱状图（普及-）</strong> ——
+需要较复杂的输出控制，对格式要求较高。<br />
+</li>
+<li><strong>B3851 图像压缩（普及/提高-）</strong> ——
+涉及结构体的模拟实现，稍具挑战性。</li>
+</ol>
+<h3 id="二基础算法10题">二、基础算法（10题）</h3>
+<ol type="1">
+<li><strong>P1255 数楼梯（普及-）</strong> ——
+典型的递推问题，涉及高精度处理。<br />
+</li>
+<li><strong>P1760 汉诺塔（普及-）</strong> ——
+经典递归题，适合理解递归和递推的关系。<br />
+</li>
+<li><strong>P1116 车厢重组（普及-）</strong> ——
+基础排序题，练习排序应用。<br />
+</li>
+<li><strong>P7072 直播获奖（普及-）</strong> —— 基础排序问题。<br />
+</li>
+<li><strong>P1115 最大子段和（普及-）</strong> ——
+前缀和问题，原始动态规划思想。<br />
+</li>
+<li><strong>P2367 语文成绩（普及-）</strong> ——
+利用差分思想进行数据处理。<br />
+</li>
+<li><strong>P1496 火烧赤壁（普及-）</strong> ——
+结合离散化和差分思想的模拟题。<br />
+</li>
+<li><strong>P1114 非常男女计划（普及/提高-）</strong> ——
+通过前缀和优化计算，提高时间复杂度。<br />
+</li>
+<li><strong>P2280 激光炸弹（普及/提高-）</strong> ——
+二维前缀和的应用。<br />
+</li>
+<li><strong>P4552 IncDec Sequence（普及+/提高）</strong> ——
+需要一定思维能力的差分问题，具有挑战性。</li>
+</ol>
+<h3 id="三基础贪心10题">三、基础贪心（10题）</h3>
+<ol type="1">
+<li><strong>P1223 排队接水（普及-）</strong> ——
+经典贪心策略，利用排序优化等待时间。<br />
+</li>
+<li><strong>P1803 线段覆盖（普及-）</strong> ——
+线段覆盖问题，考验贪心策略的正确性。<br />
+</li>
+<li><strong>P1094 纪念品分组（普及-）</strong> ——
+典型的贪心分组问题，考察排序与双指针技巧。<br />
+</li>
+<li><strong>P3817 小A的糖果（普及-）</strong> ——
+通过贪心策略调整数组，避免不必要的调整。<br />
+</li>
+<li><strong>P1208 混合牛奶（普及-）</strong> ——
+经典的最小花费贪心问题，排序后贪心匹配。<br />
+</li>
+<li><strong>P1478 陶陶摘苹果（升级版）（普及-）</strong> ——
+以最少的代价获取目标值的贪心策略。<br />
+</li>
+<li><strong>P5019 铺设道路（普及/提高-）</strong> ——
+需要一定思考的贪心题，优化铺设策略。<br />
+</li>
+<li><strong>P1106 删数问题（普及/提高-）</strong> ——
+类似单调栈的贪心策略，考验删除逻辑。<br />
+</li>
+<li><strong>P1325 雷达安装（普及/提高-）</strong> ——
+结合计算几何的贪心问题，涉及排序和区间覆盖。<br />
+</li>
+<li><strong>P1080 国王游戏（普及+/提高）</strong> ——
+具有一定难度的贪心题，需要仔细分析策略。</li>
+</ol>
+<h3 id="四基础二分及分治10题">四、基础二分及分治（10题）</h3>
+<ol type="1">
+<li><strong>P2249 查找（普及-）</strong> ——
+经典二分查找问题，适合初学者理解二分思想。<br />
+</li>
+<li><strong>P1010 幂次方（普及-）</strong> ——
+通过分治计算幂次分解，提升递归思维。<br />
+</li>
+<li><strong>P1678 烦恼的高考志愿（普及-）</strong> ——
+逻辑性较强的模拟题，适合训练分析能力。<br />
+</li>
+<li><strong>P1163 银行贷款（普及-）</strong> ——
+经典二分问题，考察浮点数二分的精度控制。<br />
+</li>
+<li><strong>P2678 跳石头（普及/提高-）</strong> ——
+具有一定难度的二分答案问题，考验思维能力。<br />
+</li>
+<li><strong>P2440 木材加工（普及/提高-）</strong> ——
+典型的二分答案题，适合巩固二分思想。<br />
+</li>
+<li><strong>P1182 数列分段 Section II（普及/提高-）</strong> ——
+需要一定思考的二分题，优化区间划分。<br />
+</li>
+<li><strong>P3743 小鸟的设备（普及/提高-）</strong> ——
+一般性的二分问题，考察思维严谨性。<br />
+</li>
+<li><strong>P1228 地毯填补问题（普及/提高-）</strong> ——
+结合分治思想进行问题拆解的好题。<br />
+</li>
+<li><strong>P4343 自动刷题机（普及+/提高）</strong> ——
+进阶的二分问题，需要较强的分析能力。</li>
+</ol>
+<h3 id="五基础数据结构7题">五、基础数据结构（7题）</h3>
+<ol type="1">
+<li><strong>P1449 后缀表达式（普及-）</strong> ——
+经典的栈应用题，适合巩固逆波兰表达式计算。<br />
+</li>
+<li><strong>P1540 机器翻译（普及-）</strong> ——
+采用队列模拟缓存机制，考察队列运用。<br />
+</li>
+<li><strong>P1996 约瑟夫问题（普及-）</strong> ——
+经典的链表模拟问题，适合练习循环链表。<br />
+</li>
+<li><strong>B3656 双端队列 1（普及-）</strong> —— 练习 deque
+结构的基本操作，增强数据结构理解。<br />
+</li>
+<li><strong>P1241 括号序列修复（普及/提高-）</strong> ——
+通过栈进行括号匹配，适合字符串处理。<br />
+</li>
+<li><strong>P4387 验证栈序列（普及/提高-）</strong> ——
+经典栈题，考察出栈顺序的合法性。<br />
+</li>
+<li><strong>P1160 队列安排（普及/提高-）</strong> ——
+需要链表实现的模拟题，稍具挑战性。</li>
+</ol>
+<h3 id="六基础搜索15题">六、基础搜索（15题）</h3>
+<ol type="1">
+<li><strong>P1706 全排列问题（普及-）</strong> —— 经典 DFS
+题，适合练习深度优先搜索。<br />
+</li>
+<li><strong>P2036 PERKET（普及-）</strong> —— 简单 DFS
+回溯，考察枚举组合。<br />
+</li>
+<li><strong>P1036 选数（普及-）</strong> —— 需要合理剪枝的 DFS
+题，优化搜索空间。<br />
+</li>
+<li><strong>P1162 填涂颜色（普及-）</strong> —— 典型 BFS
+问题，适合理解广度优先搜索。<br />
+</li>
+<li><strong>P1605 迷宫（普及-）</strong> —— 迷宫类 DFS
+题，考察路径搜索能力。<br />
+</li>
+<li><strong>P4961 小埋与扫雷（普及-）</strong> —— 结合 DFS
+进行网格搜索，逻辑清晰。<br />
+</li>
+<li><strong>P1451 求细胞数量（普及-）</strong> —— 经典 BFS
+题目，适合练习连通区域搜索。<br />
+</li>
+<li><strong>P1219 八皇后（普及/提高-）</strong> —— 经典 DFS
+题目，适合锻炼回溯剪枝思维。<br />
+</li>
+<li><strong>P1025 数的划分（普及/提高-）</strong> —— 结合剪枝优化的
+DFS，提升搜索效率。<br />
+</li>
+<li><strong>P1443 马的遍历（普及/提高-）</strong> —— 经典 BFS
+题，考察棋盘路径搜索。<br />
+</li>
+<li><strong>P1135 奇怪的电梯（普及/提高-）</strong> —— 需要建图并使用
+BFS 进行求解。<br />
+</li>
+<li><strong>P1141 01迷宫（普及/提高-）</strong> ——
+经典迷宫问题，广度优先搜索的应用。<br />
+</li>
+<li><strong>P2895 Meteor Shower S（普及/提高-）</strong> ——
+具有时间维度的 BFS，考察动态变化路径搜索。<br />
+</li>
+<li><strong>P1379 八数码难题（普及+/提高）</strong> —— 经典双向 BFS
+题，优化搜索效率。<br />
+</li>
+<li><strong>P4799 世界冰球锦标赛（普及+/提高）</strong> ——
+需要双向搜索的 BFS 题目，提高搜索技巧。</li>
+</ol>
+<h3 id="七基础动态规划15题">七、基础动态规划（15题）</h3>
+<ol type="1">
+<li><strong>P1216 数字三角形（普及-）</strong> —— 典型 DP
+题目，适合理解状态转移。<br />
+</li>
+<li><strong>B3637 最长上升子序列（普及-）</strong> —— 经典 LIS
+题，考察动态规划基础。<br />
+</li>
+<li><strong>P1002 过河卒（普及-）</strong> —— 适合入门的 DP
+题目，考察网格路径问题。<br />
+</li>
+<li><strong>P1048 采药（普及-）</strong> —— 01 背包的基础练习，适合巩固
+DP 思维。<br />
+</li>
+<li><strong>P1060 开心的金明（普及-）</strong> —— 经典 01 背包问题，考察
+DP 状态优化。<br />
+</li>
+<li><strong>P1616 疯狂的采药（普及-）</strong> ——
+完全背包问题，适合练习不同的背包模型。<br />
+</li>
+<li><strong>P1757 通天之分组背包（普及-）</strong> ——
+分组背包问题，考察动态规划的进阶应用。<br />
+</li>
+<li><strong>P1833 樱花（普及/提高-）</strong> ——
+混合背包问题，需要掌握不同的 DP 变种。<br />
+</li>
+<li><strong>P2340 Cow Exhibition G（普及/提高-）</strong> —— 01
+背包的滚动数组优化，提高空间利用率。<br />
+</li>
+<li><strong>P1434 滑雪（普及/提高-）</strong> —— 典型 DP 题目，考察递归
++ 记忆化搜索。<br />
+</li>
+<li><strong>P1091 合唱队形（普及/提高-）</strong> —— 线性 DP
+题，考察最长上升子序列的变形。<br />
+</li>
+<li><strong>P1435 回文字串（普及/提高-）</strong> —— 经典区间 DP
+题目，适合回文问题的优化。<br />
+</li>
+<li><strong>P1880 石子合并（普及+/提高）</strong> ——
+采用四边形不等式优化的 DP 问题，较为复杂。<br />
+</li>
+<li><strong>P1064 金明的预算方案（普及+/提高）</strong> ——
+具有依赖关系的 01 背包问题。<br />
+</li>
+<li><strong>P1063 能量项链（普及+/提高）</strong> —— 经典环形 DP
+题目，考察区间 DP 的应用。</li>
+</ol>
+<h3 id="八基础图论10题">八、基础图论（10题）</h3>
+<ol type="1">
+<li><strong>P1305 新二叉树（普及-）</strong> ——
+练习二叉树的基本定义和构造。<br />
+</li>
+<li><strong>P1030 求先序排列（普及-）</strong> ——
+通过递归实现树的遍历，巩固树的概念。<br />
+</li>
+<li><strong>P5908 猫猫和企鹅（普及-）</strong> ——
+适合初学者的树遍历问题。<br />
+</li>
+<li><strong>P5318 查找文献（普及-）</strong> ——
+结合搜索的图遍历问题，考察 DFS 或 BFS。<br />
+</li>
+<li><strong>P3916 图的遍历（普及/提高-）</strong> ——
+适合练习深度和广度优先搜索的应用。<br />
+</li>
+<li><strong>P2052 道路修建（普及/提高-）</strong> ——
+需要运用最小生成树算法的图论题。<br />
+</li>
+<li><strong>P3379 最近公共祖先（普及/提高-）</strong> —— 经典 LCA
+问题，适合树上倍增的练习。<br />
+</li>
+<li><strong>P1339 Heat Wave G（普及/提高-）</strong> —— 典型的 Dijkstra
+算法题，适合初学最短路径。<br />
+</li>
+<li><strong>P2910 Clear And Present Danger S（普及/提高-）</strong> ——
+经典 Floyd 算法问题，考察全源最短路径。<br />
+</li>
+<li><strong>P3385 负环（普及/提高-）</strong> —— 需要使用 SPFA
+检测负环，提高对图论的理解。</li>
+</ol>
+<h3 id="九基础数学和数论10题">九、基础数学和数论（10题）</h3>
+<ol type="1">
+<li><strong>P1017 进制转换（普及-）</strong> ——
+经典进制转换问题，适合巩固除法取余思想。<br />
+</li>
+<li><strong>P1100 高低位交换（普及-）</strong> ——
+基础位运算和进制转换的结合，适合初学者。<br />
+</li>
+<li><strong>P2651 添加括号III（普及-）</strong> —— 通过 GCD
+计算优化数学表达式，考察最大公约数应用。<br />
+</li>
+<li><strong>P3383 线性筛素数（普及-）</strong> ——
+经典筛法，适合理解线性筛与埃氏筛的优化区别。<br />
+</li>
+<li><strong>P1217 回文质数（普及-）</strong> ——
+结合素数判断与回文检测的题目，考察综合数学能力。<br />
+</li>
+<li><strong>P1075 质因数分解（普及-）</strong> ——
+通过试除法或分解质因数优化计算。<br />
+</li>
+<li><strong>P1403 约数研究（普及-）</strong> ——
+计算因子的基础数学问题，适合数论入门。<br />
+</li>
+<li><strong>P1029 最大公约数和最小公倍数问题（普及-）</strong> —— 练习
+GCD 和 LCM 计算，提高对数论的理解。<br />
+</li>
+<li><strong>P1579 哥德巴赫猜想（升级版）（普及-）</strong> ——
+经典的数论猜想问题，结合素数筛法。<br />
+</li>
+<li><strong>P1593 因子和（普及+/提高）</strong> ——
+结合快速幂、逆元和费马小定理的数论综合题，难度较高。</li>
+</ol>
+<h3 id="十基础组合数学5题">十、基础组合数学（5题）</h3>
+<ol type="1">
+<li><strong>P3414 SAC#1 - 组合数（普及/提高-）</strong> ——
+组合数计算的基础题，适合学习组合数学思想。<br />
+</li>
+<li><strong>P3197 越狱（普及/提高-）</strong> ——
+需要掌握组合数学中的容斥原理。<br />
+</li>
+<li><strong>P5520 青原樱（普及/提高-）</strong> ——
+结合排列组合思想的计数问题。<br />
+</li>
+<li><strong>P1313 计算系数（普及/提高-）</strong> ——
+计算组合数的数学题，涉及高精度运算。<br />
+</li>
+<li><strong>P2638 安全系统（普及+/提高）</strong> ——
+采用隔板法求解的组合数学问题，较具思维挑战性。</li>
+</ol>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> </li>
+        <li><strong>作者:</strong> 夏佑 | XiaU</li>
+        <li><strong>创建于
+                :</strong> 2025-02-05 18:04:27</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2025-02-05 19:21:59
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://oi.xiau.ren/hua/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+            本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 进行许可。
+            
+
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                        rel="prev"
+                        href="/Simple_Harmonic_Motion/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">简谐运动浅析</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                        rel="next"
+                        href="/Pre3/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">初赛知识点整理第3版</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title"></div>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80c%E8%AF%AD%E6%B3%95%E7%BB%83%E4%B9%A08%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">一、C++语法练习（8题）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%9510%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">二、基础算法（10题）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E5%9F%BA%E7%A1%80%E8%B4%AA%E5%BF%8310%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">三、基础贪心（10题）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E5%9F%BA%E7%A1%80%E4%BA%8C%E5%88%86%E5%8F%8A%E5%88%86%E6%B2%BB10%E9%A2%98"><span class="nav-number">4.</span> <span class="nav-text">四、基础二分及分治（10题）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%847%E9%A2%98"><span class="nav-number">5.</span> <span class="nav-text">五、基础数据结构（7题）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AD%E5%9F%BA%E7%A1%80%E6%90%9C%E7%B4%A215%E9%A2%98"><span class="nav-number">6.</span> <span class="nav-text">六、基础搜索（15题）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%83%E5%9F%BA%E7%A1%80%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%9215%E9%A2%98"><span class="nav-number">7.</span> <span class="nav-text">七、基础动态规划（15题）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AB%E5%9F%BA%E7%A1%80%E5%9B%BE%E8%AE%BA10%E9%A2%98"><span class="nav-number">8.</span> <span class="nav-text">八、基础图论（10题）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%9D%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6%E5%92%8C%E6%95%B0%E8%AE%BA10%E9%A2%98"><span class="nav-number">9.</span> <span class="nav-text">九、基础数学和数论（10题）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%81%E5%9F%BA%E7%A1%80%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A65%E9%A2%98"><span class="nav-number">10.</span> <span class="nav-text">十、基础组合数学（5题）</span></a></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">夏佑 | XiaU</a>
+        </div>
+        
+            <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.4.4</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+            
+                
+        
+                
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex justify-center items-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+        ],
+        containers: ["#swup"],
+    });
+
+    swup.hooks.on("page:view", () => {
+        Global.refresh();
+    });
+
+    // if (document.readyState === "complete") {
+    //
+    // } else {
+    //     document.addEventListener("DOMContentLoaded", () => init());
+    // }
+</script>
+
+
+
+
+
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/tools/localSearch.js"></script>
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js"></script>
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
