@@ -2337,7 +2337,7 @@ class="math inline">\(0pts\)</span>。</p>
   <entry>
     <title>简谐运动浅析</title>
     <url>/Simple_Harmonic_Motion/</url>
-    <content><![CDATA[<p>从回复力开始浅析简谐运动，再从弹簧振子回到间歇运动的本质。</p>
+    <content><![CDATA[<p>从回复力开始浅析简谐运动，再从弹簧振子回到简谐运动的本质。</p>
 <span id="more"></span>
 <h1 id="定义">定义</h1>
 <p>当某物体进行简谐运动时，物体所受的力的大小与位移的大小成正比，并且力总是指向平衡位置.</p>
